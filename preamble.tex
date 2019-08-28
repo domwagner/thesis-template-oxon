@@ -1,0 +1,124 @@
+\hypersetup{pdftitle=\@title}
+
+\ifdraft
+
+\let\cleardoublepage\relax
+\let\clearpage\relax
+
+\let\stdchapter\chapter
+\renewcommand*\chapter{%
+  \@ifstar{\starchapter}{\@dblarg\nostarchapter}}
+\newcommand*\starchapter[1]{\newpage\stdchapter*{#1}}
+\def\nostarchapter[#1]#2{
+  \ifnumequal{\value{chapter}}{0}{}{\newpage}
+  \stdchapter[{#1}]{#2}}
+
+
+\SetWatermarkScale{2}
+\SetWatermarkText{\textbf{DRAFT}}
+% always use current date
+\date{\today}
+
+\maketitle
+\begin{abstract}
+  \abstractc
+\end{abstract}
+\pdfbookmark[1]{Contents}{toc}
+\@starttoc{toc}
+\makeatother
+
+\else
+\pagenumbering{roman}
+
+\maketitle
+
+\pagestyle{empty}
+
+\thispagestyle{empty}
+
+\cleardoublepage
+
+\ifofficial
+\else
+\vspace*{12cm}
+
+\epigraph{0.7\textwidth}{``Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.''}{-- \textsc{Cicero}, \textit{de Finibus Bonorum et Malorum}, 45 BC}
+
+\cleardoublepage
+\fi
+
+\thispagestyle{empty}
+\begin{minipage}{0.4\textwidth}
+\end{minipage}
+
+
+
+% { % Disable Badbox-Warnings for this page.
+% \hfuzz=\textwidth
+% \hbadness=\maxdimen
+
+
+% \noindent {\Large\textbf{Eidesstattliche Erkl{\"{a}}rung}} \\[0.3cm]
+% Ich erkl{\"{a}}re hiermit, dass ich die vorliegende Arbeit selbst{\"{a}}ndig verfasst und keine anderen als die angegebenen Quellen
+% und Hilfsmittel verwendet habe. \\[0.8cm]
+
+
+% \noindent {\Large\textbf{Statement in Lieu of an Oath}} \\[0.3cm]
+% I hereby confirm that I have written this thesis on my own and that I have not used any other media or materials than the ones referred
+% to in this thesis. \\[2.0cm]
+
+
+% \noindent {\Large\textbf{Einverst{\"{a}}ndniserkl{\"{a}}rung}} \\[0.3cm]
+% Ich bin damit einverstanden, dass meine (bestandene) Arbeit in beiden Versionen in die Bibliothek der Informatik aufgenommen und damit
+% ver{\"{o}}ffentlicht wird. \\[0.8cm]
+
+
+% \noindent {\Large\textbf{Declaration of Consent}} \\[0.3cm]
+% I agree to make both versions of my thesis (with a passing grade) accessible to the public by having them added to the library of the
+% Computer Science Department. \\[2.0cm]
+
+% \vspace{0.1cm}
+% \begin{tabular}{l  c  c}
+%  Saarbr\"ucken, \@date  & & {\vrule width 0em depth 0.7em}\\ \cline{1-1} \cline{3-3}
+%  \multicolumn{1}{  c }{(Datum / Date)} &\ \ \ & (Unterschrift / Signature) {\vrule width 0em height 1.3em}
+% \end{tabular}
+
+% \vfill
+
+% \clearpage\mbox{}% \clearpage
+% } % End: Modified Badbox Settings.
+
+\pagestyle{plain}
+
+% \pdfbookmark[1]{Acknowledgements}{acknowledgements}
+% \section*{Acknowledgements}
+
+% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+
+% Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+
+% \newpage
+
+\pdfbookmark[1]{Abstract}{abstract}
+\section*{Abstract}
+\abstractc
+
+\clearpage\mbox{}\clearpage
+
+\cleardoublepage
+
+\pdfbookmark[1]{Contents}{toc}
+{
+\hypersetup{linkcolor=oxblue}
+\tableofcontents
+}
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\fi
+
+\pagestyle{fancy}
+
+
+\setcounter{secnumdepth}{3}
