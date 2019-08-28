@@ -1,4 +1,4 @@
-filename=dissertation
+filename=thesis
 
 default:
 	pdflatex ${filename}

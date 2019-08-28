@@ -10,11 +10,7 @@ example package^^J for wikibooks]
 \newcommand*{\college}[1]{\gdef\@college{#1}}
 \newcommand*{\@college}{Magdalen College}
 \newcommand*{\logo}[1]{\gdef\@logo{#1}}
-\newcommand*{\@logo}{crest.png}
-\newcommand*{\logoano}[1]{\gdef\@logoano{#1}}
-\newcommand*{\@logoano}{ox.png}
-\newcommand*{\logocoll}[1]{\gdef\@logocoll{#1}}
-\newcommand*{\@logocoll}{magd.png}
+\newcommand*{\@logo}{ox.png}
 \newcommand*{\department}[1]{\gdef\@department{#1}}
 \newcommand*{\@department}{Department of Computer Science}
 \newcommand*{\degree}[1]{\gdef\@degree{#1}}
@@ -22,25 +18,9 @@ example package^^J for wikibooks]
 \newcommand*{\term}[1]{\gdef\@term{#1}}
 \newcommand*{\@term}{\texttt{\string\term} currently not set. Please fix this.}
 
-
-% \newcommand*{\topic}[1]{\gdef\@topic{#1}}
-% \newcommand*{\@topic}{\texttt{\string\topic} currently not set. Please fix this.}
-
-\newcommand*{\project}[1]{\gdef\@project{#1}}
-\newcommand*{\@project}{Dissertation}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\@supervisor}{\texttt{\string\supervisor} currently
 not set. Please fix this.}
-\newcommand*{\reviewerA}[1]{\gdef\@reviewerA{#1}}
-\newcommand*{\@reviewerA}{\texttt{\string\reviewerA} currently
-not set. Please fix this.}
-\newcommand*{\reviewerB}[1]{\gdef\@reviewerB{#1}}
-\newcommand*{\@reviewerB}{\texttt{\string\reviewerB} currently
-not set. Please fix this.}
-\newcommand*{\candidate}[1]{\gdef\@candidate{#1}}
-\newcommand*{\@candidate}{\texttt{\string\candidate} currently
-not set. Please fix this.}
-
 
 \renewcommand*{\maketitle}{%
 
@@ -51,8 +31,6 @@ not set. Please fix this.}
     \textsc{\LARGE\@uni}\\[0.2cm]
     \@department\\[1.3cm]
 
-%    \textsc{\Large\@project}\\[1cm]
-
 
 %    Title
     \vspace{-0.5cm}
@@ -62,7 +40,7 @@ not set. Please fix this.}
     \end{spacing}
     
     \vspace{-0.5cm}
-    \includegraphics[width=4cm]{\@logoano}
+    \includegraphics[width=4cm]{\@logo}
     \vspace{-0.5cm}
     \\[1.8cm]
 
